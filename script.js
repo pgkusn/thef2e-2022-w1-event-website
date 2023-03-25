@@ -1,9 +1,8 @@
 const tl = gsap.timeline({
   scrollTrigger: {
-    trigger: '#cloud',
-    // markers: true,
-    start: 'top 30%',
-    end: 'top 1%',
+    trigger: '#home',
+    markers: true,
+    pin: true,
     scrub: true,
   },
 })
@@ -24,6 +23,16 @@ tl.to(
     opacity: 0,
     scale: 0,
     transformOrigin: 'left',
+  },
+  '<'
+)
+tl.to('#home', {
+  backgroundImage: 'url(images/road.png)',
+})
+tl.to(
+  'h1',
+  {
+    opacity: 0,
   },
   '<'
 )
